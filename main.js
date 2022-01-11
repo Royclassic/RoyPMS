@@ -4,42 +4,78 @@ let products =[
     {
     name : 'Fowl',
     tag : 'fowl',
-    price : 200,
+    price : 2000,
     inCart : 0
 },
 
 {
     name : 'Duck',
     tag : 'duck',
-    price : 300,
+    price : 3000,
     inCart : 0
 },
 
 {
-    name : 'Queil',
-    tag : 'queil',
-    price : 600,
+    name : 'Indian Chiken',
+    tag : 'indian',
+    price : 1200,
     inCart : 0
 },
 
+{
+    name : 'Pigeon',
+    tag : 'pigeon',
+    price : 800,
+    inCart : 0
+},
+
+{
+    name : 'Goose',
+    tag : 'Neugierige_Hausgans',
+    price : 4000,
+    inCart : 0
+},
+
+{
+    name : 'Brazilian',
+    tag : 'brazilian',
+    price : 1300,
+    inCart : 0
+},
 {
     name : 'Duck',
-    tag : 'fduck',
-    price : 84,
+    tag : 'blue duck',
+    price : 2000,
     inCart : 0
 },
-
-{
-    name : 'Fowl',
-    tag : 'fowl',
-    price : 100,
-    inCart : 0
-},
-
 {
     name : 'Queil',
-    tag : 'queil',
-    price : 100,
+    tag : 'queil m',
+    price : 3000,
+    inCart : 0
+},
+{
+    name : 'Indian Chicken',
+    tag : 'indian',
+    price : 1500,
+    inCart : 0
+},
+{
+    name : 'Guinea_fowlGuinea fowl',
+    tag : 'Guinea_fowl',
+    price : 3500,
+    inCart : 0
+},
+{
+    name : 'Pigeon',
+    tag : 'pigeon',
+    price : 700,
+    inCart : 0
+},
+{
+    name : 'Queil',
+    tag : 'queil m',
+    price : 3100,
     inCart : 0
 },
 
@@ -58,6 +94,7 @@ function onLoadCartNumbers(){
     if (productNumber){
         document.querySelector('.cart span').textContent = productNumber;
     }
+    
 }
 
 function cartNumbers(products){
@@ -137,21 +174,22 @@ function displayCart(){
             <img src="./images/${item.tag}.jpg">
             <span>${item.name}</span>
             </div>
-            <div class = "cprice">KSH ${item.price}.00</div> 
+            <div class = "cprice">KSH:${item.price}.00</div> 
             <div class = "quantity">${item.inCart}</div>
-            <div class = "total">KSH ${item.inCart*item.price}.00</div>
+            <div class = "total">KSH:${item.inCart*item.price}.00</div>
             </div>
             `;
         })
     
         productContainer.innerHTML +=`
-            <div class="basketTotalContainer">
-            <h4 class ="basketTotalTitle">
+        <hr><div class="basketTotalContainer">
+             <h4 class ="basketTotalTitle">
                     Basket Total
                     </h4>
             <h4 class ="basketTotal">
             KSH:${cartCost}.00
             </h4>
+            </div>
             `
     }
 }
